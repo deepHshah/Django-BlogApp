@@ -1,0 +1,59 @@
+{% extends "main.html" %}
+{% block content %}
+
+<style>
+    body{
+        background-color: rgb(252, 128, 128);
+    }
+</style>
+<div class="container profile">
+    <div class="row">
+        <div class="col-md-4">
+           
+        </div>
+        <div class="col-md-8">
+            <div class="profile-tab">
+                <div class="tab-pane">
+                    <br><br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Username:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p>{{user.username }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Full Name:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p>{{user.get_full_name}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Email:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p>{{user.email}}</p>
+                        </div>
+                    </div>
+                    <!-- {% if email_sent %}
+                    <p>An email has been sent to {{ email }} with instructions on how to reset your password.</p>
+                    {% else %}
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                          <button type="submit">Reset Password</button>
+                    </form> -->
+          {% endif %}
+               
+                </div>
+                <a href=""class="btn btn-secondary">Edit Profile</a>
+            </div>
+        </div>
+</div>
+</div>
+
+{%endblock%}
